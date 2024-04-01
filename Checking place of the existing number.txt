@@ -1,0 +1,23 @@
+def bs(list1,element):
+    start=0
+    end=len(list1)-1
+    mid=0
+    while start<=end:
+        mid=(end+start)//2
+        if list1[mid]<element:
+            start=mid+1
+        elif list1[mid]>element:
+            end=mid-1
+        else:
+            return mid
+    return -1
+list1=[0,1,2,3,4,5,6,7,8,9,10,20,22,26,34,38,39,46,49,53,56,58,68,69,73]
+print("list is ")
+print(list1)
+n=int(input("enetr the number="))
+element_to_search=n
+my_result=bs(list1,element_to_search)
+if my_result != -1:
+    print("element found at index",str(my_result))
+else:
+    print("element not found")

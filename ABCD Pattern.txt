@@ -1,0 +1,9 @@
+n=int(input("enetr the number of rows = "))
+ascii_number=65
+rows=n
+for i in range (0,rows):
+    for j in range (0,i+1):
+        character = chr(ascii_number)
+        print(character,end="")
+    print()
+    ascii_number+=1

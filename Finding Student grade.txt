@@ -1,0 +1,27 @@
+SON=int(input("enter marks obtained in SON (out of 100)="))
+AM=int(input("enter marks obtained in AM  (out of 100)="))
+LDC=int(input("enter marks obtained in SON (out of 100)="))
+EGR=int(input("enter marks obtained in SON (out of 100)="))
+CDE=int(input("enter marks obtained in ABC (out of 100)="))
+print()
+p=(SON+AM+LDC+EGR+CDE)/5
+print("Course Name        Marks obtained")
+print("   SON                 ",SON)
+print("   AM                  ",AM)
+print("   LDC                 ",LDC)
+print("   EGR                 ",EGR)
+print("   CDE                 ",CDE)
+print()
+
+if SON<40 or AM<40 or LDC<40 or EGR<40 or CDE<40:
+    print("You are Failed")
+else :
+    print("PERCENTAGE -",p)
+    if p>=75 and p<=100:
+        print("GRADE - DISTINCTION")
+    elif p>=60 and p<75:
+        print("GRADE - FIRST CLASS")
+    elif p>=50 and p<60:
+        print("GRADE - SECOND CLASS")
+    else:
+        print("GRADE - PASSED CLASS")

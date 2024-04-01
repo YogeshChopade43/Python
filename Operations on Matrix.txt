@@ -1,0 +1,61 @@
+matrix1 = []
+matrix2 = []
+
+row1 = int(input("\nEnter the number of rows for Matrix 1: "))
+col1 = int(input("Enter the number of columns for Matrix 1: "))
+
+row2 = int(input("\nEnter the number of rows for Matrix 2: "))
+col2 = int(input("Enter the number of columns for Matrix 2: "))
+
+if col1 != row2:
+    print("Error: Number of columns in Matrix 1 should match the number of rows in Matrix 2 for multiplication.")
+else:
+    choice = 0
+    while choice != 3:
+        print("\n1. Addition")
+        print("2. Multiplication")
+        print("3. Exit")
+        choice = int(input("Enter your choice: "))
+        
+        if choice == 1:
+            matrix1 = [[int(input("Enter element for Matrix 1 at ({},{})".format(i, j))) for j in range(col1)] for i in range(row1)]
+            matrix2 = [[int(input("Enter element for Matrix 2 at ({},{})".format(i, j))) for j in range(col2)] for i in range(row2)]
+
+            print("\nMatrix 1:")
+            for row in matrix1:
+                print(row)
+
+            print("\nMatrix 2:")
+            for row in matrix2:
+                print(row)
+
+            # Perform matrix addition
+            result = [[matrix1[i][j] + matrix2[i][j] for j in range(col1)] for i in range(row1)]
+            print("\nAddition Result:")
+            for row in result:
+                print(row)
+        
+        elif choice == 2:
+            matrix1 = [[int(input("Enter element for Matrix 1 at ({},{})".format(i, j))) for j in range(col1)] for i in range(row1)]
+            matrix2 = [[int(input("Enter element for Matrix 2 at ({},{})".format(i, j))) for j in range(col2)] for i in range(row2)]
+
+            print("\nMatrix 1:")
+            for row in matrix1:
+                print(row)
+
+            print("\nMatrix 2:")
+            for row in matrix2:
+                print(row)
+
+            # Perform matrix multiplication
+            result = [[sum(matrix1[i][k] * matrix2[k][j] for k in range(col1)) for j in range(col2)] for i in range(row1)]
+            print("\nMultiplication Result:")
+            for row in result:
+                print(row)
+        
+        elif choice == 3:
+            print("Exiting...")
+        
+        else:
+            print("Invalid choice! Please enter 1, 2, or 3.")
+

@@ -1,0 +1,8 @@
+count = 1
+row = 2
+column = 4
+for i in range (0,2):
+    for j in range (0,4):
+        print(count,end="")
+        count+=1
+    print()
